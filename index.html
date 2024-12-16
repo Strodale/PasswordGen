@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container"> 
+        <!-- Left Section -->
+        <div class="left-section">
+            <h1><strong>A Very Random, Random Password Generator.</strong></h1>
+            <p>A random generator, for random passwords, to keep your random online accounts protected during random password changes.</p>
+            <p>For security, passwords are randomly generated and have limited customization. 
+                <br />
+                <br />(Memorable passwords are fixed at 7 characters)
+                <br />(We DO NOT store your passwords)</p>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <h2>Random Password Generator</h2>  
+
+            <!-- Password Type Tabs -->
+            <div class="password-tabs">
+                <button id="randomType" class="tab-btn active">Random</button>
+                <button id="memorableType" class="tab-btn">Memorable</button>
+                <button id="pinType" class="tab-btn">PIN</button>
+            </div>
+
+            <!-- Customization Options -->
+            <div class="options">
+                <div class="slider-container">
+                    <label for="passwordLength"><strong>Length<br>4 - 32</strong></label>
+                    <input type="range" id="passwordLength" min="4" max="32" value="16">
+                    <span id="lengthValue"><strong>16</strong></span>
+                </div>                
+
+                <div class="toggles">
+                    <label>
+                        <input type="checkbox" id="includeNumbers" checked>
+                        <strong>Numbers</strong>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="includeSymbols">
+                        <strong>Symbols</strong>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Password Display -->
+            <div class="password-output">
+                <p id="generatedPassword">Your Password Appear Here!<br> Click 'Generate Password'</p>
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-container">
+                <button id="copyBtn" class="action-btn">Copy Password</button>
+                <button id="refreshBtn" class="action-btn">Generate Password</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

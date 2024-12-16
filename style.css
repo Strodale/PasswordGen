@@ -1,0 +1,213 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Left Section */
+.left-section {
+    flex: 1;
+    background-color: #000000;
+    color: white;
+    padding: 50px;
+}
+
+.left-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.left-section p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Right Section */
+.right-section {
+    flex: 1;
+    background: #ffffff;
+    padding: 40px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Password Type Tabs */
+.password-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    flex: 1;
+    border: none;
+    background: #e0e0e0;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.tab-btn.active {
+    background: #000000;
+    color: white;
+}
+
+/* Options */
+.options {
+    margin-bottom: 20px;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.toggles {
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    font-size: 1rem;
+}
+
+/* Password Display */
+.password-output {
+    background: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    word-break: break-all;
+    position: relative; /* Added to fix the spark effect */
+}
+
+/* Buttons */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #000000;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background: black;
+    color: white;
+}
+/* Slider Styling */
+.slider-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative; /* Required for spark positioning */
+}
+
+input[type="range"] {
+    -webkit-appearance: none; /* Removes default styling */
+    appearance: none; /* Standard property for compatibility */
+    width: 100%; /* Full width between labels */
+    height: 12px; /* Increased height */
+    border-radius: 10px;
+    background: #ddd;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #0044cc;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #0044cc;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #0044cc;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    transform: scale(1.2);
+}
+
+/* Sparks Effect */
+.spark {
+    position: absolute;
+    width: 10px; /* Spark size */
+    height: 10px;
+    background: radial-gradient(circle, #ffcc00, transparent); /* Glowing spark */
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px rgba(255, 204, 0, 0.8); /* Glow effect */
+    pointer-events: none; /* Prevent interaction */
+    animation: spark-fade 0.7s linear forwards;
+    z-index: 1000; /* Ensure sparks appear above other elements */
+}
+
+@keyframes spark-fade {
+    0% {
+        transform: scale(1) translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5) translate(10px, -10px); /* Subtle upward movement */
+        opacity: 0;
+    }
+}
